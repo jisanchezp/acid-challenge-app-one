@@ -6,6 +6,13 @@ class LoginController < ApplicationController
   end
 
   def validate_request
-    @response = HTTParty.post("#{API_HOST}/rest/login", :body => params[:login].to_json, :headers => { 'Content-Type' => 'application/json' } )
+    @response = HTTParty.post(
+      "#{API_HOST}/rest/login",
+      :body => params[:login].to_json,
+      :headers => {
+        'Content-Type' => 'application/json'
+      }
+    )
+    render status: @response.code
     end
 end
