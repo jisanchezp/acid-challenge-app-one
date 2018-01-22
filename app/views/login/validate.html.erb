@@ -9,11 +9,10 @@
 
   <div class="field">
     <%= form.label :image %>
-    <%= form.text_field :image, id: :login_image %>
+    <%= form.file_field :image, id: :login_image, multiple: false, accept:'image/png', class: 'form-control' %>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
-
