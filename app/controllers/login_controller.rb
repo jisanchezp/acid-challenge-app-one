@@ -1,13 +1,12 @@
 class LoginController < ApplicationController
   require 'httparty'
-  include LoginHelper
 
   def validate
     @login = Login.new
   end
 
   def validate_request
-    params[:login][:image] =  file_to_base64(params[:login][:image])
+    params[:login][:image] =  helpers.file_to_base64(params[:login][:image])
     @response = HTTParty.post(
       "#{API_HOST}/rest/login",
       :body => params[:login].to_json,
