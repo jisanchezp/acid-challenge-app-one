@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  API_HOST = Figaro.env.api_host
 
-  API_HOST = (Rails.env.development? or Rails.env.test?) ?  "http://localhost:3002" : "https://login-api-jisanchez.herokuapp.com/"
 end
