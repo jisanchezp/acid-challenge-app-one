@@ -1,0 +1,28 @@
+<h1>New Login attempt</h1>
+
+<%= form_for(@login) do |f| %>
+ <% if @login.errors.any? %>
+   <div id="error_explanation">
+     <h2><%= pluralize(@login.errors.count, "error") %> prohibited this login from being executed:</h2>
+     <ul>
+     <% @login.errors.full_messages.each do |message| %>
+       <li><%= message %></li>
+     <% end %>
+     </ul>
+   </div>
+ <% end %>
+
+ <div class="field">
+   <%= f.label :email %><br>
+   <%= f.text_field :email %>
+ </div>
+
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image, id: :login_image, multiple: false, accept:'image/png', class: 'form-control' %>
+  </div>
+
+ <div class="actions">
+   <%= f.submit %>
+ </div>
+<% end %>
