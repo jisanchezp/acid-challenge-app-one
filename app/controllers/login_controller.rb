@@ -12,7 +12,8 @@ class LoginController < ApplicationController
       "#{API_HOST}/rest/login",
       :body => params[:login].to_json,
       :headers => {
-        'Content-Type' => 'application/json'
+        'Content-Type' => 'application/json',
+        'User-Agent' => request.user_agent
       }
     )
     render status: @response.code
