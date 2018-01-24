@@ -1,4 +1,8 @@
 class Login
   include ActiveModel::Model
-  attr_accessor :email, :image, :result
+  attr_accessor :email, :image
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  validates :email, presence: true, length: { maximum: 255 },
+                    format: { with: VALID_EMAIL_REGEX }
+  validates :image, presence: true
 end
