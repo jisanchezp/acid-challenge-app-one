@@ -108,7 +108,7 @@ After executing the choosing command, the test results will be displayed in the 
 
 ## Deployment
 
-A live version of these app has already been deployed at [heroku](https://login-form-jisanchez.herokuapp.com/)
+A live version of these app has already been deployed at [https://login-form-jisanchez.herokuapp.com/](https://login-form-jisanchez.herokuapp.com/)
 
 If you want to deploy in your own account, follow this steps:
 
@@ -157,6 +157,34 @@ $ git push heroku master
 ```
 $ heroku open
 ```
+
+## Manual testing - Possible return cases
+
+The next possible scenarios describe the possible request returns, depending how the **login-form** data was filled.
+
+1) Successful Authentification:
+
+  Request return:
+    * Status: 200
+    * JSON: { "message" = "OK" }
+
+  Conditions:
+    * Email address **must** exists in [server's](https://github.com/jisanchezp/acid-challenge-app-two) database.
+    * Image: any .PNG image different from the one associated with the user's email in [server's](https://github.com/jisanchezp/acid-challenge-app-two) database.
+
+    An email will be sent to the entered email address. It might take some minutes to arrive to your inbox, if it doesn't arrives, check your spam folder.
+
+2) Unsuccessful Authentification:
+
+  Request return:
+    * Status: 401
+    * JSON: { "message" = "No autorizado" }
+
+  Conditions:
+    * Existing email address in [server's](https://github.com/jisanchezp/acid-challenge-app-two) database.
+    * Image: The exact same .PNG image as the one associated with the user's email in [server's](https://github.com/jisanchezp/acid-challenge-app-two) database.
+
+    If this conditions are met, an email will be sent, but if the email address doesn't exists in [server's](https://github.com/jisanchezp/acid-challenge-app-two) database, no email will be sent, to prevent email spamming to a non-registered email.
 
 ## Authors
 
