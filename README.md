@@ -162,6 +162,12 @@ $ heroku open
 
 The next possible scenarios describe the possible request returns, depending how the **login-form** data was filled.
 
+First you should enter to your localhost, or production deployed site for **Acid Challenge App One** (There's already a live application available at Heroku for manual testing purposes [https://login-form-jisanchez.herokuapp.com/](https://login-form-jisanchez.herokuapp.com/))
+
+Fill the login form with data with the desired email and image.
+
+The cases stated beolw are the only **happy-path** responses you should receive.
+
 1) Successful Authentification:
 
   Request return:
