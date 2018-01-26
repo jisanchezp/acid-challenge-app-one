@@ -168,7 +168,7 @@ Enter to your localhost, or production deployed site for **Acid Challenge App On
 
 Fill the login form with data with the desired email and image.
 
-The cases stated beolw are the only **happy-path** responses you should receive.
+The cases stated below are the only **happy-path** responses you should receive.
 
 1) Successful Authentification:
 
@@ -180,7 +180,7 @@ The cases stated beolw are the only **happy-path** responses you should receive.
     * Email address **must** exists in [server's](https://github.com/jisanchezp/acid-challenge-app-two) database.
     * Image: any .PNG image different from the one associated with the user's email in [server's](https://github.com/jisanchezp/acid-challenge-app-two) database.
 
-    An email will be sent to the entered email address. It might take some minutes to arrive to your inbox, if it doesn't arrives, check your spam folder.
+  An email will be sent to the entered email address. It might take some minutes to arrive to your inbox, if it doesn't arrives, check your spam folder.
 
 2) Unsuccessful Authentification:
 
@@ -192,7 +192,7 @@ The cases stated beolw are the only **happy-path** responses you should receive.
     * Existing email address in [server's](https://github.com/jisanchezp/acid-challenge-app-two) database.
     * Image: The exact same .PNG image as the one associated with the user's email in [server's](https://github.com/jisanchezp/acid-challenge-app-two) database.
 
-    If this conditions are met, an email will be sent, but if the email address doesn't exists in [server's](https://github.com/jisanchezp/acid-challenge-app-two) database, no email will be sent, to prevent email spamming to a non-registered email.
+  If this conditions are met, an email will be sent, but if the email address doesn't exists in [server's](https://github.com/jisanchezp/acid-challenge-app-two) database, no email will be sent, to prevent email spamming to a non-registered email.
 
 ## Authors
 
