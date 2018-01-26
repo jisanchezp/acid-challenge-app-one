@@ -8,7 +8,7 @@ plus a message).
 
 **IMPORTANT:**
 
-The followings steps, with the exception of **Prerequisites** and
+The following steps, with the exception of **Prerequisites** and
 **Running the tests**, are just for **Acid Challenge App One**, for the other
 applications you must follow their own steps specified in their Github pages.
 
@@ -30,7 +30,7 @@ To deploy the whole system, you have to clone these three applications.
 $ git clone https://github.com/jisanchezp/acid-challenge-app-one
 ```
 
-2) Install all gems executing the following command inside project's main folder:
+2) Install gems executing the following command inside project's main folder:
 
 ```
 $ bundle install --without production
