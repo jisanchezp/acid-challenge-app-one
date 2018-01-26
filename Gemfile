@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '~> 5.1.4'
+gem 'bootstrap-sass', '3.3.7'
 gem 'httparty',    '0.15.6'
 gem 'figaro'
 gem 'puma', '~> 3.7'
